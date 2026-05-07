@@ -14,26 +14,32 @@
 #define JOY_RIGHT_SW_PIN_DEFAULT  10
 
 // Initialization functions with selectable pins
-void initJoyLeft(int xPin = JOY_LEFT_X_PIN_DEFAULT, 
-                 int yPin = JOY_LEFT_Y_PIN_DEFAULT, 
-                 int swPin = JOY_LEFT_SW_PIN_DEFAULT);
-void initJoyRight(int xPin = JOY_RIGHT_X_PIN_DEFAULT, 
-                  int yPin = JOY_RIGHT_Y_PIN_DEFAULT, 
-                  int swPin = JOY_RIGHT_SW_PIN_DEFAULT);
+// void initJoyLeft(int xPin = JOY_LEFT_X_PIN_DEFAULT, 
+//                  int yPin = JOY_LEFT_Y_PIN_DEFAULT, 
+//                  int swPin = JOY_LEFT_SW_PIN_DEFAULT);
+// void initJoyRight(int xPin = JOY_RIGHT_X_PIN_DEFAULT, 
+//                   int yPin = JOY_RIGHT_Y_PIN_DEFAULT, 
+//                   int swPin = JOY_RIGHT_SW_PIN_DEFAULT);
+
+void initKY023(int xPin, int yPin, int buttonPin);
 
 // JoyLeft read functions
-int readJoyLeftX();
-int readJoyLeftY();
-bool isJoyLeftPressed();
+// int readJoyLeftX();
+// int readJoyLeftY();
+// bool isJoyLeftPressed();
 
-// JoyRight read functions
-int readJoyRightX();
-int readJoyRightY();
-bool isJoyRightPressed();
+// // JoyRight read functions
+// int readJoyRightX();
+// int readJoyRightY();
+// bool isJoyRightPressed();
 
 // Test functions
 void testJoyLeft();
 void testJoyRight();
 void testKY023();
+
+
+int readKY023X();
+int readKY023Y();
 
 #endif

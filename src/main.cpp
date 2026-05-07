@@ -15,29 +15,31 @@ void setup()
 {
   // Initialize hardware and peripherals
   initSerial(115200);  // Initialize Serial communication at 115200 baud
-  initJoyLeft(0, 0, 0);  // JoyLeft: X=null, Y=null, SW=null
-  initJoyRight(0, 0, 0);  // JoyRight: X=null, Y=null, SW=null
+  // initJoyLeft(0, 0, 0);  // JoyLeft: X=null, Y=null, SW=null
+  // initJoyRight(0, 0, 0);  // JoyRight: X=null, Y=null, SW=null
+  initKY023(2, 1, 10);
 }
 
 void loop()
 {
   // Main program loop
-  serialPrintln(readJoyLeftY());
-  if (readJoyLeftY() > 0) {
-    serialPrintln("forwards");
+  serialPrintln(readKY023Y());
+    serialPrintln(readKY023Y());
+  //   if (readKY023Y() > 0) {
+  //   serialPrintln("forwards");
 
-  }
-  if (readJoyLeftX() < 0) {
-    serialPrintln("backwards");
+  // }
+  // if (readKY023X() < 0) {
+  //   serialPrintln("backwards");
 
-  }
-  if (readJoyLeftY() > 0) {
-    setServoAngle(SERVO1, 180);
+  // }
+  // if (readKY023Y() > 0) {
+  //   setServoAngle(SERVO1, 180);
 
-  }
-  if (readJoyLeftX() < 0) {
-    setServoAngle(SERVO1, 0);
-
-  }
+  // }
+  // if (readKY023X() < 0) {
+  //   setServoAngle(SERVO1, 0);
+  // }
+  delay(200);
   }
 
