@@ -17,13 +17,13 @@ void initKY023(int xPin, int yPin, int buttonPin) {
 int readKY023X() {
     int rawValue = analogRead(_ky023_xPin);
     int mappedValue = map(rawValue, 0, 4095, 0, 255);
-    return mappedValue - 128;
+    return rawValue; // mappedValue - 128;
 }
 
 int readKY023Y() {
     int rawValue = analogRead(_ky023_yPin);
     int mappedValue = map(rawValue, 0, 4095, 0, 255);
-    return mappedValue - 128;
+    return rawValue; // mappedValue - 128;
 }
 
 bool isKY023ButtonPressed() {
